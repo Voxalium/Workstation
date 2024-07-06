@@ -1,5 +1,44 @@
+$main-bg-color: #121212;
+$hover-color: #212121;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  height: 100vh;
+}
+#root {
+  display: flex;
+  height: 100%;
+}
+main {
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+  &:hover {
+    background-color: $hover-color;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.justify-center {
+  justify-content: center;
+}
+.align-center {
+  align-items: center;
+}
+
+@import "./views/Home/Home.scss";
+
+@import "./components/NavBar/NavBar.scss";

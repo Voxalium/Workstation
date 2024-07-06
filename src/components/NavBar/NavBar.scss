@@ -1,0 +1,25 @@
+.NavBar {
+  height: 100%;
+  background-color: $main-bg-color;
+
+  .nav-button {
+    margin-top: 12px;
+    width: 30px;
+    height: 30px;
+  }
+  .links {
+    margin-top: 22px;
+    width: 90%;
+    a {
+      text-align: center;
+      border-radius: 12px;
+    }
+  }
+}
+
+.open {
+  width: 200px;
+}
+.close {
+  width: 80px;
+}
