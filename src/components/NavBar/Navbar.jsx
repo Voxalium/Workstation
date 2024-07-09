@@ -9,7 +9,9 @@ export default function NavBar() {
     <nav
       className={`${isNavOpen ? "open" : "close"} NavBar column align-center`}
     >
-      <button className="nav-button" onClick={handleNav}></button>
+      <button className="nav-button row" onClick={handleNav}>
+        <img src="/ui/bars-solid.svg" alt="menu icon" />
+      </button>
       <div className="links column">
         <NavLink to="/">Home</NavLink>
         <NavLink to="/test">Calcul</NavLink>

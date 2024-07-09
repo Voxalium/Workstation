@@ -18,10 +18,6 @@ main {
 }
 a {
   text-decoration: none;
-  color: #fff;
-  &:hover {
-    background-color: $hover-color;
-  }
 }
 
 .column {
@@ -40,5 +36,6 @@ a {
 }
 
 @import "./views/Home/Home.scss";
+@import "./views/Test/Test.scss";
 
 @import "./components/NavBar/NavBar.scss";

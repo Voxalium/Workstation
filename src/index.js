@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Home from "./views/Home/Home";
 import Test from "./views/Test/Test";
+import Addition from "./views/Test/Addition";
 import Session from "./views/Session/Session";
 import NotFound from "./views/NotFound/NotFound";
 import Note from "./views/Note/Note";
@@ -20,6 +21,7 @@ root.render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/test" element={<Test />} />
+        <Route path="/test/addition" element={<Addition />} />
         <Route path="/session" element={<Session />} />
         <Route path="/note" element={<Note />} />
         <Route path="*" element={<NotFound />} />
