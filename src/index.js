@@ -4,8 +4,8 @@ import "./index.scss";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Home from "./views/Home/Home";
-import Test from "./views/Test/Test";
-import Addition from "./views/Test/Addition";
+import Calcul from "./views/Calcul/Calcul";
+import MakeCalcul from "./views/Calcul/MakeCalcul";
 import Session from "./views/Session/Session";
 import NotFound from "./views/NotFound/NotFound";
 import Note from "./views/Note/Note";
@@ -20,12 +20,15 @@ root.render(
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/test" element={<Test />} />
-        <Route path="/test/addition" element={<Addition />} />
+        <Route path="/calcul/" element={<Calcul />} />
+        <Route path="/calcul/addition" element={<MakeCalcul op="+" />} />
+        <Route path="/calcul/substraction" element={<MakeCalcul op="-" />} />
+        <Route path="/calcul/multiplication" element={<MakeCalcul op="*" />} />
+        <Route path="/calcul/division" element={<MakeCalcul op="/" />} />
         <Route path="/session" element={<Session />} />
         <Route path="/note" element={<Note />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
-  </React.StrictMode>,
+  </React.StrictMode>
 );

@@ -14,7 +14,7 @@ export default function NavBar() {
       </button>
       <div className="links column">
         <NavLink to="/">Home</NavLink>
-        <NavLink to="/test">Calcul</NavLink>
+        <NavLink to="/calcul">Calcul</NavLink>
         <NavLink to="/session">Session</NavLink>
         <NavLink to="/note">Note</NavLink>
       </div>

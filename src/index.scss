@@ -16,6 +16,9 @@ body {
 main {
   width: 100%;
 }
+div{
+  height: 100%;
+}
 a {
   text-decoration: none;
 }
@@ -34,8 +37,12 @@ a {
 .align-center {
   align-items: center;
 }
+.full-center{
+  align-items: center;
+  justify-content: center;
+}
 
 @import "./views/Home/Home.scss";
-@import "./views/Test/Test.scss";
+@import "./views/Calcul/Calcul.scss";
 
 @import "./components/NavBar/NavBar.scss";
