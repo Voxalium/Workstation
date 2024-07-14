@@ -1,6 +1,10 @@
+import { useState } from "react";
 import { Add, Div, getRandomInt, Mul, Sub } from "../../scripts/calcul";
-export default function MakeCalcul({op}) {
+export default function MakeCalcul({op, attempts=5}) {
   const n = getRandomInt();
+  const [score, setScore] = useState(0); 
+  const [test, setTest] = useState(0);
+  const [isCorrect, setIsCorrect] = useState(null);
 
   let res = 0;
   let calcString = "";
@@ -29,28 +33,43 @@ export default function MakeCalcul({op}) {
   }
 
 
-  function checkRes(e){
-    e.preventDefault();
+  function checkRes(){
+    setTest(test+1);
 
     const guessInput = Number(document.querySelector("#guess").value); 
     if(guessInput === res){
-      console.log("Good")
-    } else console.log("Wrong!")
+      setIsCorrect(true)
+      setScore(score+1);
+    } else setIsCorrect(false); 
+
+    document.querySelector("#guess").value = "";
 
   }
 
-  return (
+  if(test !==attempts) {
+
+    return(
     <main className="MakeCalcul">
+        
+      <h1>Score:{score}</h1>
+      <h2>Test:{test}/{attempts}</h2>
       <div className="container column full-center">
         <p>{calcString}</p>
         <form action="" className="guess-form">
           <label htmlFor="guess">Guess : </label>
           <input type="text" name="guess" id="guess"/>
           <input type="submit" value="Guess" onClick={(e)=>{
-            checkRes(e)
+            e.preventDefault();
+            checkRes()
           }} />
-        </form>
+          {isCorrect === false && <p>Wrong</p>}
+               </form>
       </div>
     </main>
   );
+  } else return (
+  <main className="MakeCalcul">
+    <h1>Score:{score}/{attempts}</h1>
+  </main>
+  )    
 }
