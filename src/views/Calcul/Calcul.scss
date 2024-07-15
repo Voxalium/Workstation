@@ -1,7 +1,16 @@
 .Calcul {
-  .links {
-    a {
-      color: #000;
+  .container {
+    .links{
+      gap: 6px;
+      a {
+        padding: 6px;
+        border-radius: 12px;
+        color: #fff;
+        background-color: $main-bg-color;
+        &:hover{
+          background-color: $hover-color;
+        }
+      }
     }
   }
 }
